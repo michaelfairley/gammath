@@ -1,4 +1,4 @@
-use std::ops;
+ use std::ops;
 
 #[repr(C)]
 #[derive(Copy, Clone, PartialEq, Debug)]
@@ -33,6 +33,25 @@ impl Vec3 {
           y: self.z * other.x - self.x * other.z,
           z: self.x * other.y - self.y * other.x }
   }
+
+  #[inline]
+  pub fn magnitude2(self) -> f32 {
+    self.x * self.x
+      + self.y * self.y
+      + self.z * self.z
+  }
+
+  // #[inline]
+  // pub fn magnitude(self) -> f32 {
+  //   self.magnitude2().sqrt()
+  // }
+
+  #[inline]
+  pub fn magnitude(self) -> f32 {
+    (self.x * self.x
+      + self.y * self.y
+      + self.z * self.z).sqrt()
+  }
 }
 
 #[cfg(test)]
@@ -58,6 +77,20 @@ mod tests {
       let sum = v1.cross(v2);
 
       assert_eq!(sum, vec3(-3.0, 6.0, -3.0 ));
+    }
+
+    #[test]
+    fn magnitude2() {
+      let v = vec3(3.0, 4.0, 12.0);
+
+      assert_eq!(v.magnitude2(), 169.0);
+    }
+
+    #[test]
+    fn magnitude() {
+      let v = vec3(3.0, 4.0, 12.0);
+
+      assert_eq!(v.magnitude(), 13.0);
     }
   }
 }
