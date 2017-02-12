@@ -1,0 +1,6 @@
+- No traits
+- Only `f32`
+- No dependencies
+- SIMD
+- Err towards OpenGLier values
+- Only include functionality that's commonly used in games & graphics programming
