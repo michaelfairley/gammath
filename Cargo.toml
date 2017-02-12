@@ -1,0 +1,10 @@
+[package]
+name = "gammath"
+version = "0.1.0"
+authors = ["Michael Fairley <michaelfairley@gmail.com>"]
+
+[dependencies]
+
+[dev-dependencies]
+cgmath = "*"
+nalgebra = "*"
