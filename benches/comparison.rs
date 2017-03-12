@@ -57,8 +57,6 @@ mod vec3 {
 
     #[bench]
     fn nalgebra(b: &mut ::test::Bencher) {
-      use nalgebra::Cross;
-
       let v1 = ::nalgebra::Vector3::new(1.0f32, 2.0, 3.0);
       let v2 = ::nalgebra::Vector3::new(4.0f32, 5.0, 6.0);
 
@@ -100,8 +98,6 @@ mod vec3 {
 
     #[bench]
     fn nalgebra(b: &mut ::test::Bencher) {
-      use nalgebra::Norm;
-
       let vs = gen(::nalgebra::Vector3::new);
 
       b.iter(|| vs.iter().fold(0.0, |acc, item| acc + item.norm() ) );
