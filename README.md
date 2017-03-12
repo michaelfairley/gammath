@@ -1,6 +1,7 @@
 - No traits
 - Only `f32`
-- No dependencies
+- No required dependencies
 - SIMD
 - Err towards OpenGLier values
 - Only include functionality that's commonly used in games & graphics programming
+- Short names (e.g. `V3` for the same reason that `f32` isn't `float32`)
