@@ -5,3 +5,5 @@
 - Err towards OpenGLier values
 - Only include functionality that's commonly used in games & graphics programming
 - Short names (e.g. `V3` for the same reason that `f32` isn't `float32`)
+- Column-major matrices and column vectors (i.e. post-multiplying)
+- Radians
